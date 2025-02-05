@@ -58,15 +58,13 @@ nameIn.addEventListener("keydown", function(event){
     saveName();
 });
 
+function saveName(){
+    localStorage.setItem("Name",nameIn.value);
+}
 
 function showData(){
     items.innerHTML = localStorage.getItem("toDoListData");
     nameIn.value = localStorage.getItem("Name");
-}
-
-
-function saveName(){
-    localStorage.setItem("Name",nameIn.value);
 }
 
 showData();
