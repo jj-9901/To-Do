@@ -119,6 +119,7 @@ body{
 
 .item .fa-check{
     visibility: hidden;
+    transition: visibility 0.01s ease;
 }
 .item.checked .text{
     text-decoration: line-through;
@@ -141,7 +142,7 @@ body{
     width:250px;
     word-wrap: break-word;
     overflow-wrap: break-word;
-    transition: color 0.15s ease;
+    transition: color,text-decoration 0.15s ease;
 }
 .item i:hover{
     cursor: pointer;
