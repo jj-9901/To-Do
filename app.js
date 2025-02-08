@@ -57,7 +57,7 @@ function saveName(){
     localStorage.setItem("Name",nameIn.value);
 }
 
-nameIn.addEventListener("keyup", function(event){
+nameIn.addEventListener("input", function(event){
     saveName();
 });
 
