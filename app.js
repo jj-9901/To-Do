@@ -1,6 +1,7 @@
 const input= document.getElementById("input");
 const items= document.querySelector(".items");
 const button= document.querySelector("button");
+const nameIn = document.querySelector(".name");
 
 input.addEventListener("keydown",function(event){
     if(event.key==="Enter"){
@@ -52,15 +53,13 @@ function saveData(){
     localStorage.setItem("toDoListData",items.innerHTML);
 }
 
-
-const nameIn = document.querySelector(".name");
-nameIn.addEventListener("keydown", function(event){
-    saveName();
-});
-
 function saveName(){
     localStorage.setItem("Name",nameIn.value);
 }
+
+nameIn.addEventListener("keyup", function(event){
+    saveName();
+});
 
 function showData(){
     items.innerHTML = localStorage.getItem("toDoListData");
